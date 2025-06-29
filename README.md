@@ -23,6 +23,8 @@ El sistema diferencia entre:
 
 Nota: Estos usuarios son importantes para verificar el Swagger, ya que con estos se puede ingresar y obtener el token sin la necesidad de crear un usuario.
 
+Nota 2: Los reportes aún no son funcionales en esta etapa del proyecto.
+
 ## 🧭 Tabla de contenidos
 
 - [🚀 Despliegue](#-despliegue)
@@ -244,16 +246,6 @@ https://localhost:{puerto}/swagger/index.html
 
 ---
 
-## 🧪 Testing
-
-- **5 pruebas unitarias** en `InventorySystem.Tests.Business`
-  - Pruebas de lógica de validación y creación en `UserService`, `LoanService`
-
-- **3 pruebas de integración** usando `InMemoryDbContext`
-  - Inserción, consulta y borrado de entidades
-
----
-
 ## ✅ Requisitos para acceder
 
 Antes de llamar a cualquier endpoint protegido (todo excepto login/register), el cliente debe:
@@ -274,7 +266,6 @@ Authorization: Bearer {token}
 - AutoMapper  
 - JWT Authentication  
 - HTML/CSS/JS puro (sin frameworks)  
-- jsPDF / XLSX para exportación de datos  
 
 ---
 
