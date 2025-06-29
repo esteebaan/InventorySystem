@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clients</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+    <!-- Botón visible solo si es Admin u Operator -->
+    <div id="adminControls" class="form-container" style="display: none;">
+        <a href="/pages/create-client.html" class="btn">➕ Add Client</a>
+    </div>
+
+    <div class="table-container">
+        <h2>👥 Registered Clients</h2>
+        <div class="top-bar">
+            <button id="addBtn">➕ Add</button>
+        </div>
+
+        <table id="clientTable">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p id="msg"></p>
+    </div>
+
+    <div id="toastContainer"></div>
+
+    <script src="/js/toast.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/clients.js"></script>
+    <script src="/js/footer.js"></script>
+</body>
+</html>

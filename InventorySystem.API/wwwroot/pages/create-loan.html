@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Loan</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <div class="form-container">
+        <h2>📄 Register New Loan</h2>
+        <form id="loanForm">
+            <label>Client:</label>
+            <select id="clientId" required></select>
+
+            <label>Article:</label>
+            <select id="articleId" required></select>
+
+            <label>Delivery Date:</label>
+            <input type="date" id="deliveredAt" required />
+
+            <label>Status:</label>
+            <select id="status" required>
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Returned">Returned</option>
+            </select>
+
+
+            <button type="submit">Save Loan</button>
+            <p id="msg"></p>
+        </form>
+    </div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/create-loan.js"></script>
+    <script src="/js/footer.js"></script>
+</body>
+</html>

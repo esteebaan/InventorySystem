@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+    <!-- Visible solo si es Admin u Operator -->
+    <div id="adminControls" class="form-container" style="display: none;">
+        <a href="/pages/create-article.html" class="btn">➕ Add Article</a>
+    </div>
+
+    <div class="table-container">
+        <h2>📦 Articles List</h2>
+
+        <div class="top-bar">
+            <button id="addBtn">➕ Add</button>
+            <button id="exportPdfBtn" class="btn">📄 Export to PDF</button>
+        </div>
+
+        <table id="articleTable">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <p id="msg"></p>
+    </div>
+
+    <div id="toastContainer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+    <script src="/js/toast.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/articles.js"></script>
+    <script src="/js/footer.js"></script>
+</body>
+</html>

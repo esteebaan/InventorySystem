@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Loans</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <div class="table-container">
+        <h2>📄 Loans</h2>
+
+        <div class="filters">
+            <label for="clientFilter">Client:</label>
+            <select id="clientFilter">
+                <option value="">All Clients</option>
+            </select>
+
+            <label for="articleFilter">Article:</label>
+            <select id="articleFilter">
+                <option value="">All Articles</option>
+            </select>
+
+            <label for="statusFilter">Status:</label>
+            <select id="statusFilter">
+                <option value="">All Status</option>
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Returned">Returned</option>
+            </select>
+
+            <button id="addBtn" class="btn">➕ Register Loan</button>
+            <button id="exportExcelBtn" class="btn">📊 Export to Excel</button>
+
+        </div>
+
+        <p id="msg" style="margin-top: 1rem;"></p>
+
+        <table id="loanTable">
+            <thead>
+                <tr>
+                    <th>Client</th>
+                    <th>Article</th>
+                    <th>Delivery</th>
+                    <th>Return</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="toastContainer"></div>
+<script src="/js/toast.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/loans.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</body>
+</html>

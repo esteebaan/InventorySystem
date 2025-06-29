@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create User</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <div class="form-container">
+        <h2>👤 Create New User</h2>
+        <form id="userForm">
+            <input type="text" id="firstName" placeholder="First Name" required />
+            <input type="text" id="lastName" placeholder="Last Name" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+
+            <!-- Este select solo se muestra si está logueado como Admin -->
+            <div id="roleSelectContainer" style="display: none;">
+                <label for="role">Role:</label>
+                <select id="role">
+                    <option value="">Select Role</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Operator">Operator</option>
+                </select>
+            </div>
+
+            <button type="submit">Create</button>
+            <p id="msg"></p>
+        </form>
+
+        <div id="userListSection" style="display: none;">
+            <hr />
+            <h3>👥 Existing Users</h3>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/create-user.js"></script>
+    <script src="/js/footer.js"></script>
+</body>
+</html>

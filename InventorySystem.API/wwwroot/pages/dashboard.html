@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="dashboard">
+        <h2>📊 Inventory Dashboard</h2>
+        <p id="roleInfo"></p>
+
+        <!-- Panel Admin opcional -->
+        <div id="adminPanel" class="card" style="display: none;">
+            <h3>⚙️ Admin Panel</h3>
+            <p>Access to user management, article deletion, and full audit features.</p>
+        </div>
+
+        <!-- Tarjetas resumen -->
+        <div class="card-container">
+            <a href="/pages/clients.html" class="card">
+                <h3>👥 Clients</h3>
+                <p id="clientCount">0</p>
+            </a>
+            <a href="/pages/articles.html" class="card">
+                <h3>📦 Articles</h3>
+                <p id="articleCount">0</p>
+            </a>
+            <a href="/pages/loans.html" class="card">
+                <h3>📄 Loans</h3>
+                <p id="loanCount">0</p>
+            </a>
+        </div>
+
+        <!-- Resumen préstamos -->
+        <div class="summary-container" style="margin-top: 3rem;">
+            <h3>📈 Loan Summary</h3>
+            <ul>
+                <li>Total loans: <strong id="totalLoans">0</strong></li>
+                <li>Returned: <strong id="returnedLoans">0</strong></li>
+                <li>Active: <strong id="activeLoans">0</strong></li>
+            </ul>
+
+            <canvas id="loanChart" height="120" style="margin-top: 2rem;"></canvas>
+        </div>
+
+        <p id="msg"></p>
+    </div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/footer.js"></script>
+</body>
+</html>
